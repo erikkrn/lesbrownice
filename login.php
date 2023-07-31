@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","root","","kitchenviki");
+$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
  ?>
 
 <!DOCTYPE html>

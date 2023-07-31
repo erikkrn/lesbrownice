@@ -8,7 +8,7 @@ session_start();
 //print_r($_SESSION['keranjang']);
 //echo "</pre>";
 
-$koneksi = new mysqli("localhost","root","","kitchenviki");
+$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 
 if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
 {

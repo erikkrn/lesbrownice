@@ -1,4 +1,4 @@
-<?php $koneksi = new mysqli("localhost","root","","kitchenviki"); ?>
+<?php $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,6 +1,6 @@
 <?php  
 
-$koneksi = new mysqli("localhost","root","","kitchenviki");
+$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 $keyword = $_GET["keyword"];
 $semuadata=array();
 $ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%' OR deskripsi_produk LIKE '%$keyword%'");
