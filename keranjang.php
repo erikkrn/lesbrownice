@@ -50,7 +50,8 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
 
 					$ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
 					$pecah = $ambil->fetch_assoc();
-					$subharga = (int)$pecah['harga_produk']*$jumlah;
+					$pecahInt = (int) pecah['harga_produk']
+					$subharga = $pecahInt*$jumlah;
 					
 					 ?>
 					
