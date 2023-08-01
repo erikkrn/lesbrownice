@@ -11,10 +11,11 @@ session_start();
 $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 
 //if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
-//{
-//	echo "<script>alert('keranjang Kosong, Silahkan Belanja Dulu');</script>";
-//	echo "<script>location='index.php';</script>";
-//}
+if (empty($_SESSION['keranjang']))
+{
+	echo "<script>alert('keranjang Kosong, Silahkan Belanja Dulu');</script>";
+	echo "<script>location='index.php';</script>";
+}
 
  ?>
  <!DOCTYPE html>
