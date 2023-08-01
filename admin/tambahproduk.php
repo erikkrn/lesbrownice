@@ -36,7 +36,7 @@
  		$nama = $_FILES['foto']['name'];
  		$lokasi =$_FILES['foto']['tmp_name'];
  		move_uploaded_file($lokasi,"../foto_produk/".$nama);
- 		$koneksi->query("INSERT INTO produk(nama_produk,harga_produk,berat_produk,stock_produk,foto_produk,deskripsi_produk) VALUES ('$_POST[nama]','$_POST[harga]','$_POST[berat]','$_POST[stock]' '$nama' , '$_POST[deskripsi]')	");
+ 		$koneksi->query("INSERT INTO produk(nama_produk,harga_produk,berat_produk,stock_produk,foto_produk,deskripsi_produk) VALUES ('$_POST[nama]','$_POST[harga]','$_POST[berat]','$_POST[stock]', '$nama' , '$_POST[deskripsi]')	");
 
 
  			echo "<div class='alert alert-info'> Data Tersimpan</div>";
