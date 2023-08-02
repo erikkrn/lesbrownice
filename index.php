@@ -44,7 +44,7 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
       <img src="admin/assets/img/carosel2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="admin/assets/img/carose3jpg.jpg" class="d-block w-100" alt="...">
+      <img src="admin/assets/img/carosel3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
