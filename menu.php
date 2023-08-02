@@ -13,7 +13,7 @@
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Keranjang.php">Keranjang</a>
+          <a class="nav-link" href="keranjang.php">Keranjang</a>
         </li>
         <?php if (isset($_SESSION['pelanggan'])):?>
         <li class="nav-item">
@@ -43,3 +43,4 @@
   </div>
 </nav>
 
+  
