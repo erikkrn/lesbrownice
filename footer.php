@@ -11,13 +11,13 @@
       </div>
        <div class="col-md-6 text-end">
         <a href="https://www.instagram.com/eriikrkz/" class="text-decoration-none">
-          <img src="admin/assets/img/sosialmedia/instagram.jpg" class="ms-2" style="width: 30px;">
+          <img src="admin/assets/img/sosialMedia/instagram.jpg" class="ms-2" style="width: 30px;">
         </a>
          <a href="" class="text-decoration-none">
-          <img src="admin/assets/img/sosialmedia/facebook.jpg" class="ms-2" style="width: 30px;">
+          <img src="admin/assets/img/sosialMedia/facebook.jpg" class="ms-2" style="width: 30px;">
         </a>
          <a href="https://wa.me/6285784729636" class="text-decoration-none">
-          <img src="admin/assets/img/sosialmedia/wa.jpg" class="ms-2" style="width: 30px;">
+          <img src="admin/assets/img/sosialMedia/wa.jpg" class="ms-2" style="width: 30px;">
         </a>
          <a href="" class="text-decoration-none">
           <img src="admin/assets/img/Logo_toko.png" class="ms-2" style="width: 30px;">
