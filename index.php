@@ -69,6 +69,7 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
   			<?php while($perproduk=$ambil->fetch_assoc()){ ?>
 
   			<div class="container">
+          <div class="carousel-item">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
     <div class="card" style="width: 18rem;">
     <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" class="card-img-top" alt="...">
@@ -84,9 +85,17 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
       <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-outline-info">Detail</a>
     </div>
   </div>
-      
+     </div> 
     </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
       <?php } ?>
     </div>
   </div>
