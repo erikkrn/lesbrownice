@@ -132,6 +132,11 @@ font-size: 16px;"> Last Agustus 2023 &nbsp; <a href="login.html" class="btn btn-
 
                         include 'laporan_pembelian.php';
                     }
+                    elseif($_GET['halaman']=="hapuspelanggan.php")
+                    {
+                        
+                        include 'hapuspelanggan.php';
+                    }
 
                 }
 
