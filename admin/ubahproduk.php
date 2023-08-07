@@ -1,7 +1,7 @@
 <h2>Ubah Produk</h2>
 
 <?php 
-$ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk=$_GET[id]");
+$ambil=$dbase_conn->query("SELECT * FROM produk WHERE id_produk=$_GET[id]");
 $pecah=$ambil->fetch_assoc();
  
 echo "<pre>";
@@ -61,7 +61,7 @@ echo "</pre>";
  	{
  		move_uploaded_file($lokasifoto,"foto_produk/$namafoto");
 
- 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
+ 		$dbase_conn->query("UPDATE produk SET nama_produk='$_POST[nama]',
  		 harga_produk='$_POST[harga]',
  		  berat_produk='$_POST[berat]',
  		   foto_produk='$namafoto',
@@ -72,7 +72,7 @@ echo "</pre>";
  	}
  	else 
  	{
- 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
+ 		$dbase_conn->query("UPDATE produk SET nama_produk='$_POST[nama]',
  			harga_produk='$_POST[harga]', berat_produk='$_POST[berat]',
  			 deskripsi_produk='$_POST[deskripsi]' 
  			 WHERE id_produk='$_GET[id]'" );
