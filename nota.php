@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki"); ?>
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
 	<section class="konten">
 		<div class="container">
 			<h2>Detail Pembelian</h2>
-<?php $ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
+<?php $ambil=$dbase_conn->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
 	$detail=$ambil->fetch_assoc(); ?>
 
 <!-- <pre><?php //print_r($detail);?></pre> -->
@@ -81,7 +81,7 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
 	</thead>
 	<tbody>
 		<?php $nomor=1; ?>
-		<?php $ambil=$koneksi->query("SELECT * FROM pembelian_produk WHERE id_pembelian='$_GET[id]'"); ?>
+		<?php $ambil=$dbase_conn->query("SELECT * FROM pembelian_produk WHERE id_pembelian='$_GET[id]'"); ?>
 		<?php while ($pecah=$ambil->fetch_assoc()) {?>
 		<tr>
 

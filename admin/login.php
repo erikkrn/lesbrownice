@@ -1,6 +1,6 @@
 ﻿<?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
  ?>
 
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
 
                                     if (isset($_POST['login'])) 
                                     {
-                                        $ambil = $koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]' AND password='$_POST[pass]'");
+                                        $ambil = $dbase_conn->query("SELECT * FROM admin WHERE username='$_POST[user]' AND password='$_POST[pass]'");
                                         $yangcocok = $ambil->num_rows;
                                         if ($yangcocok==1) 
                                         {

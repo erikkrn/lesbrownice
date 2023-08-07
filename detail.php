@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki"); ?>
+<?php $dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki"); ?>
 <?php 
 
 $id_produk = $_GET["id"];
 
-$ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk' ");
+$ambil = $dbase_conn->query("SELECT * FROM produk WHERE id_produk='$id_produk' ");
 $detail = $ambil->fetch_assoc();
 
 //echo "<pre>";

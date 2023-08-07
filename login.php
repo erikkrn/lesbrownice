@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
  ?>
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ if (isset($_POST["login"]))
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
-	$ambil = $koneksi->query("SELECT * FROM pelanggan WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
+	$ambil = $dbase_conn->query("SELECT * FROM pelanggan WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
 
 	$akunyangcocok = $ambil->num_rows;
 	if ($akunyangcocok==1)

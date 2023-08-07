@@ -1,9 +1,9 @@
 <?php  
 
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 $keyword = $_GET["keyword"];
 $semuadata=array();
-$ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%' OR deskripsi_produk LIKE '%$keyword%'");
+$ambil = $dbase_conn->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%' OR deskripsi_produk LIKE '%$keyword%'");
 while($pecah = $ambil->fetch_assoc())
 {
 	$semuadata[]=$pecah;

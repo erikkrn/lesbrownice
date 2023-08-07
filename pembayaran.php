@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 
 //jika belum login tapi di akses paksa
 
@@ -14,7 +14,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 //mendapatkan id pembayaran
 
 $idpem = $_GET['id'];
-$ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pembelian='$idpem'");
+$ambil = $dbase_conn->query("SELECT * FROM pembelian WHERE id_pembelian='$idpem'");
 $detpem = $ambil->fetch_assoc();
 
 //mendapatkan id pelanggan yg beli
@@ -89,10 +89,10 @@ if (isset($_POST["kirim"]))
 	$tanggal = date("y-m-d");
 
 	//simpan pembayaran
-	$koneksi->query("INSERT INTO pembayaran(id_pembelian,nama,bank,jumlah,tanggal,bukti) VALUES ('$idpem','$nama','$bank','$jumlah','$tanggal','$namafiks')");
+	$dbase_conn->query("INSERT INTO pembayaran(id_pembelian,nama,bank,jumlah,tanggal,bukti) VALUES ('$idpem','$nama','$bank','$jumlah','$tanggal','$namafiks')");
 
 	//update data pembelian dari pending ke sukses
-	$koneksi->query("UPDATE pembelian SET status_pembelian='sudah kirim pembayaran' WHERE id_pembelian='$idpem'");
+	$dbase_conn->query("UPDATE pembelian SET status_pembelian='sudah kirim pembayaran' WHERE id_pembelian='$idpem'");
 
 
 echo "<script>alert('Terimakasih Sudah Mengirimkan Data Pembayaran')</script>";

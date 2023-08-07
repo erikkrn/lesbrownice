@@ -1,6 +1,6 @@
 <h2>Detail Pembelian</h2>
 <?php 
-	$ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
+	$ambil=$dbase_conn->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan WHERE pembelian.id_pembelian='$_GET[id]'");
 	$detail=$ambil->fetch_assoc();
  ?>
 <pre><?php print_r($detail); ?></pre>
@@ -28,7 +28,7 @@
 	</thead>
 	<tbody>
 		<?php $nomor=1; ?>
-		<?php $ambil=$koneksi->query("SELECT * FROM pembelian_produk JOIN produk ON pembelian_produk.id_produk=produk.id_produk WHERE pembelian_produk.id_pembelian='$_GET[id]'"); ?>
+		<?php $ambil=$dbase_conn->query("SELECT * FROM pembelian_produk JOIN produk ON pembelian_produk.id_produk=produk.id_produk WHERE pembelian_produk.id_pembelian='$_GET[id]'"); ?>
 		<?php while ($pecah=$ambil->fetch_assoc()) {?>
 		<tr>
 

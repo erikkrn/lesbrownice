@@ -1,9 +1,9 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 
 $id_pembelian = $_GET['id'];
-$ambil = $koneksi->query("SELECT * FROM pembayaran LEFT JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian WHERE 
+$ambil = $dbase_conn->query("SELECT * FROM pembayaran LEFT JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian WHERE 
 	pembelian.id_pembelian='$id_pembelian'");
 $detbay = $ambil->fetch_assoc();
 

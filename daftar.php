@@ -1,4 +1,4 @@
-<?php $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");?>
+<?php $dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,7 +76,7 @@
 						$telepon = $_POST['telepon'];
 
 						//cek plagiat email
-						$ambil = $koneksi->query("SELECT * FROM pelanggan WHERE email_pelanggan='$email'");
+						$ambil = $dbase_conn->query("SELECT * FROM pelanggan WHERE email_pelanggan='$email'");
 						$yangcocok = $ambil->num_rows;
 						if ($yangcocok==1) 
 						{
@@ -86,7 +86,7 @@
 						else 
 						{
 							//input ke data pelanggan
-							$koneksi->query("INSERT INTO pelanggan(email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,alamat_pelanggan) VALUES('$email','$password','$nama','$telepon','$alamat')");
+							$dbase_conn->query("INSERT INTO pelanggan(email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,alamat_pelanggan) VALUES('$email','$password','$nama','$telepon','$alamat')");
 
 							echo "<script>alert('Pendaftaran Sukses, Silahkan Login')</script>";
 							echo "<script>location='login.php'</script>";

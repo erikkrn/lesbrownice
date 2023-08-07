@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 
 //jika belum login tapi di akses paksa
 
@@ -43,7 +43,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 					//mendapatkan id pelanggan
 					$id_pelanggan = $_SESSION['pelanggan']['id_pelanggan'];
 
-					$ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pelanggan='$id_pelanggan'");
+					$ambil = $dbase_conn->query("SELECT * FROM pembelian WHERE id_pelanggan='$id_pelanggan'");
 					while($pecah = $ambil->fetch_assoc()){
 
 

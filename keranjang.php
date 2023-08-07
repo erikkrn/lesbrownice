@@ -8,7 +8,7 @@ session_start();
 //print_r($_SESSION['keranjang']);
 //echo "</pre>";
 
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 
 if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 {
@@ -48,7 +48,7 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 					<?php foreach ($_SESSION['keranjang'] as $id_produk => $jumlah): ?>
 					<?php 
 
-					$ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+					$ambil = $dbase_conn->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
 					$pecah = $ambil->fetch_assoc();
 					$pecahInt = (int) $pecah['harga_produk'];
 					$subharga = $pecahInt*$jumlah;

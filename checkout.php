@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
 if (!isset($_SESSION['pelanggan'])) 
 
 {
@@ -42,7 +42,7 @@ if (!isset($_SESSION['pelanggan']))
 					<?php foreach ($_SESSION['keranjang'] as $id_produk => $jumlah): ?>
 					<?php 
 
-					$ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+					$ambil = $dbase_conn->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
 					$pecah = $ambil->fetch_assoc();
 					$subharga = $pecah['harga_produk']*$jumlah;
 					//echo "<pre>";
@@ -84,7 +84,7 @@ if (!isset($_SESSION['pelanggan']))
 							<select class="form-control" name="id_ongkir">
 								<option value="">Cek Ongkir</option>
 								<?php 
-								$ambil=$koneksi->query("SELECT * FROM ongkir"); 
+								$ambil=$dbase_conn->query("SELECT * FROM ongkir"); 
 								while($perongkir=$ambil->fetch_assoc()){
 								?>
 
@@ -114,7 +114,7 @@ if (!isset($_SESSION['pelanggan']))
 					$tanggal_pembelian = date("y-m-d");
 					$alamat_pengiriman = $_POST['alamat_pengiriman'];
 
-					$ambil=$koneksi->query("SELECT * FROM ongkir WHERE id_ongkir='$id_ongkir'");
+					$ambil=$dbase_conn->query("SELECT * FROM ongkir WHERE id_ongkir='$id_ongkir'");
 					$arrayongkir = $ambil->fetch_assoc();
 					$nama_kota = $arrayongkir['nama_kota'];
 					$tarif = $arrayongkir['tarif'];
@@ -124,18 +124,18 @@ if (!isset($_SESSION['pelanggan']))
 
 					//menyimpan data ke tabel pembelian
 
-					$koneksi->query("INSERT INTO pembelian (id_pelanggan,id_ongkir,tanggal_pembelian,total_pembelian,nama_kota,tarif,alamat_pengiriman) VALUES ('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman') ");
+					$dbase_conn->query("INSERT INTO pembelian (id_pelanggan,id_ongkir,tanggal_pembelian,total_pembelian,nama_kota,tarif,alamat_pengiriman) VALUES ('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman') ");
 
 					//mendapatkan id pembelian terbaru
 
-					$id_pembelian_barusan = $koneksi->insert_id;
+					$id_pembelian_barusan = $dbase_conn->insert_id;
 					foreach($_SESSION["keranjang"] as $id_produk => $jumlah )
 
 					{
 
 						//mendapatkan data produk dari id produk
 
-						$ambil = $koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+						$ambil = $dbase_conn->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
 						$perproduk = $ambil->fetch_assoc();
 
 						$nama  = $perproduk['nama_produk'];
@@ -144,12 +144,12 @@ if (!isset($_SESSION['pelanggan']))
 
 						$subberat = $perproduk['berat_produk']*$jumlah;
 						$subharga = $perproduk['harga_produk']*$jumlah; 
-						$koneksi->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,nama,harga,berat,subberat,subharga,jumlah) 
+						$dbase_conn->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,nama,harga,berat,subberat,subharga,jumlah) 
 							VALUES ('$id_pembelian_barusan','$id_produk','$nama','$harga','$berat','$subberat','$subharga','$jumlah')");
 
 
 						//update stock
-						$koneksi->query("UPDATE produk SET stock_produk=stock_produk -$jumlah WHERE id_produk='$id_produk'");
+						$dbase_conn->query("UPDATE produk SET stock_produk=stock_produk -$jumlah WHERE id_produk='$id_produk'");
 
 					}
 

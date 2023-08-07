@@ -7,7 +7,7 @@ if (isset($_POST['kirim']))
 	$tgl_mulai = $_POST['tglm'];
 	$tgl_selesai = $_POST['tgls'];
 
-	$ambil = $koneksi->query("SELECT * FROM pembelian pm LEFT JOIN pelanggan pl ON
+	$ambil = $dbase_conn->query("SELECT * FROM pembelian pm LEFT JOIN pelanggan pl ON
 		pm.id_pelanggan=pl.id_pelanggan WHERE tanggal_pembelian BETWEEN '$tgl_mulai' AND '$tgl_selesai' ");
 	while ($pecah = $ambil->fetch_assoc())
 	{

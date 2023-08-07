@@ -14,7 +14,7 @@
 	</thead>
 	<tbody>
 		<?php $nomor=1; ?>
-		<?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
+		<?php $ambil=$dbase_conn->query("SELECT * FROM produk"); ?>
 		<?php while($pecah = $ambil->fetch_assoc()) { ?>
 			<tr>
 			<td><?php echo $nomor; ?></td>

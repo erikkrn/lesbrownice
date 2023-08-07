@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
+$dbase_conn = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki");
  ?>
 <!doctype html>
 <html lang="en">
@@ -65,7 +65,7 @@ $koneksi = new mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenvi
   			</h5>
   		</div>
   		<div class="row row-cols-4">
-  			<?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
+  			<?php $ambil=$dbase_conn->query("SELECT * FROM produk"); ?>
   			<?php while($perproduk=$ambil->fetch_assoc()){ ?>
 
   			<div class="container">

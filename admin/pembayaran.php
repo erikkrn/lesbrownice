@@ -7,7 +7,7 @@ $id_pembelian = $_GET['id'];
 
 //mengambil data pembayaran berdasarkan id pembelian 
 
-$ambil = $koneksi->query("SELECT * FROM pembayaran WHERE id_pembelian='$id_pembelian'");
+$ambil = $dbase_conn->query("SELECT * FROM pembayaran WHERE id_pembelian='$id_pembelian'");
 $detail = $ambil->fetch_assoc();
 
 //echo "<pre>";
@@ -68,7 +68,7 @@ if (isset($_POST['proses']))
 {
 	$resi = $_POST["resi"];
 	$status = $_POST["status"];
-	$koneksi->query("UPDATE pembelian SET resi_pengiriman='$resi',status_pembelian='$status' WHERE id_pembelian='$id_pembelian'");
+	$dbase_conn->query("UPDATE pembelian SET resi_pengiriman='$resi',status_pembelian='$status' WHERE id_pembelian='$id_pembelian'");
 
 
 	echo "<script>alert('Data Pembelian Terupdate')</script>";
