@@ -20,7 +20,7 @@
 			<td><?php echo $pecah['email_pelanggan']; ?></td>
 			<td><?php echo $pecah['telepon_pelanggan']; ?></td>
 			<td>
-				<a href="hapuspelanggan.php" class="btn btn-danger">Hapus</a>
+				<a href="index.php?halaman=hapuspelanggan&id=<?php echo $pecah['id_pelanggan']; ?>" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
 		<?php $nomor++; ?>
