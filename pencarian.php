@@ -1,5 +1,5 @@
 <?php  
-$dbase_conn = new mysqli("localhost","root","","tokobrownis");
+$dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");
 $keyword = $_GET["keyword"];
 $semuadata=array();
 $ambil = $dbase_conn->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%' OR deskripsi_produk LIKE '%$keyword%'");

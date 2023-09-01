@@ -1,6 +1,6 @@
 ﻿<?php 
 session_start();
-$dbase_conn = new mysqli("localhost","root","","tokobrownis");?>
+$dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

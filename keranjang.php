@@ -7,7 +7,7 @@ session_start();
 //echo "<pre>";
 //print_r($_SESSION['keranjang']);
 //echo "</pre>";
- $dbase_conn = new mysqli("localhost","root","","tokobrownis");
+ $dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");
 
 if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 {

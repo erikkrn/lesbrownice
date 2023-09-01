@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$dbase_conn = new mysqli("localhost","root","","tokobrownis");
+$dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");
 
 //jika belum login tapi di akses paksa
 

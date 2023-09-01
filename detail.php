@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php $dbase_conn = new mysqli("localhost","root","","tokobrownis");?>
+<?php $dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");?>
 <?php 
 
 $id_produk = $_GET["id"];

@@ -1,5 +1,5 @@
-<!-- mysqli("localhost","n1569713_erik","Erik6969","n1569713_kitchenviki" -->
-<?php $dbase_conn = new mysqli("localhost","root","","tokobrownis");?>
+
+<?php $dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");?>
 <!DOCTYPE html>
 <html>
 <head>
