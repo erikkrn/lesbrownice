@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");?>
+$dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713_lesbrownice");
 
 $id_pembelian = $_GET['id'];
 $ambil = $dbase_conn->query("SELECT * FROM pembayaran LEFT JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian WHERE 

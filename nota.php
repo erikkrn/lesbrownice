@@ -105,7 +105,7 @@ $dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","n1569713
 				<div class="alert alert-info">
 					<p>
 						Silahkan melakukan pembayan RP. <?php echo number_format ($detail['total_pembelian']); ?> Ke <br>
-						<strong>Bank BCA 123-333 VIKI FITRIA</strong>
+						<strong>Bank BCA 133-0906 Rievaldi Elang</strong>
 					</p>
 				</div>
 			</div>
