@@ -8,6 +8,12 @@ if (!isset($_SESSION['pelanggan']))
 	echo "<script>location='login.php';</script>";
 }
 
+if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
+{
+	echo "<script>alert('keranjang Kosong, Silahkan Belanja Dulu');</script>";
+	echo "<script>location='index.php';</script>";
+}
+
  ?>
 
 <!DOCTYPE html>
