@@ -1,6 +1,6 @@
 <?php 
 session_start();
- $dbase_conn = new mysqli("localhost","root","","tokobrownis");?>
+ $dbase_conn = new mysqli("localhost","n1569713_lesbrownice","Elang123","tn1569713_lesbrownice");?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -74,13 +74,13 @@ session_start();
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="admin/assets/img/carosel1.jpg" class="d-block w-100" alt="...">
+      <img src="admin/assets/img/karosel1.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="admin/assets/img/carosel2.jpg" class="d-block w-100" alt="...">
+      <img src="admin/assets/img/karosel2.jpeg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="admin/assets/img/carosel3.jpg" class="d-block w-100" alt="...">
+      <img src="admin/assets/img/karosel3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
