@@ -1,0 +1,1 @@
+<?php $dbase_conn = new mysqli("localhost","root","","tokobrownis");?>
