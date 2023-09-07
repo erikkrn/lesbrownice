@@ -39,7 +39,7 @@ session_start();
       <img src="admin/assets/img/karosel1.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="admin/assets/img/karosel2.jpeg" class="d-block w-100" alt="...">
+      <img src="admin/assets/img/karosel2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="admin/assets/img/karosel3.jpg" class="d-block w-100" alt="...">
